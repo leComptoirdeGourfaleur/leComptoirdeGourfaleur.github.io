@@ -82,11 +82,12 @@ body {
     border: solid 2px var(--cta-color);
     z-index: 9999;
     box-shadow: 4px 4px 8px rgba(255, 255, 255, .2);
+    transition: all .2s;
 }
 
 #cookie-banner .cookie-content {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     align-items: flex-start;
 }
 
@@ -96,7 +97,7 @@ body {
 #cookie-banner .cookie-content div {
     margin-top: 30px;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     gap: 16px;
 }
 
@@ -355,6 +356,8 @@ footer #adresse {
     width: 100%;
     text-align: center;
     padding: 12px 0;
+    color: #fff;
+    text-decoration: underline;
 }
 
 footer .footer-container {
@@ -523,6 +526,20 @@ footer .footer-container ul li a:hover {
         --padding-card: 25px;
     }
 
+    
+    #cookie-banner {
+        right: 5%;
+        width: 90%;
+        padding: calc(5% + 8px);
+    }
+
+    #cookie-banner .cookie-content div {
+        gap: 16px;
+        width: 100%;
+        justify-content: center;
+    }
+
+
     #header-container {
         padding: 0;
         justify-content: center;
@@ -578,6 +595,10 @@ footer .footer-container ul li a:hover {
 }
 
 @media (max-width: 400px) {
+
+    #cookie-banner .cookie-content p {
+        font-size: 1rem;
+    }
 
     #description {
         padding: 0 20px;
