@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assets/css/sec-card.css">
     <title>Le Comptoir de Gourfaleur</title>
     <script src="./assets/js/carousel.js" defer></script>
+    <script src="./assets/js/cookies.js" defer></script>
 </head>
 <body>
     <header>
@@ -55,7 +56,7 @@
             </div>
             
             <video data-bg-video loop muted playsinline preload="auto" poster="./assets/media/2359.avif" >
-                <source src="./assets/media/0730 (v3).mp4" type="video/mp4" />
+                <source src="./assets/media/0730.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
         </section>
@@ -223,7 +224,10 @@
 
     <footer>
         <div id="map-container">
-            <iframe title="google maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d25722.878572397705!2d-1.1034073947810215!3d49.08440127774649!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480b9571a3c5d3ef%3A0x5545e971c607efbc!2sLe%20Comptoir%20de%20Gourfaleur!5e1!3m2!1sfr!2sfr!4v1722377193224!5m2!1sfr!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="content-container">
+                <p>Acceptez les cookies pour avoir accès a la map</p>
+                <button onclick="AcceptGoogleMaps()">Accepter les cookies</button>
+            </div>
         </div>
         <div class="footer-container">
             <div class="boules"></div>
@@ -241,7 +245,6 @@
                 <li><p>Pages</p></li>
                 <li><a href="#hero-section">Accueil</a></li>
                 <li><a href="/legals/">Mentions légales</a></li>
-                <li><a href="/cookies/">Cookies</a></li>
             </ul>
             <ul>
                 <li><p>Articles</p></li>
@@ -256,6 +259,12 @@
         const video = document.querySelector('[data-bg-video]');
         window.onload = () => {
             video.play();
+        }
+
+        AcceptGoogleMaps = () => {
+            document.getElementById('map-container').innerHTML = `
+                <iframe title="google maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d25722.878572397705!2d-1.1034073947810215!3d49.08440127774649!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480b9571a3c5d3ef%3A0x5545e971c607efbc!2sLe%20Comptoir%20de%20Gourfaleur!5e1!3m2!1sfr!2sfr!4v1722377193224!5m2!1sfr!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            `;
         }
     </script>
     
