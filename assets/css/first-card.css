@@ -342,6 +342,7 @@ main section.card-container #menu {
     color: var(--cta-color);
     font-size: 4rem;
     font-family: var(--font-title);
+    text-wrap: nowrap;
 }
 
 #contact .phone-container a {
