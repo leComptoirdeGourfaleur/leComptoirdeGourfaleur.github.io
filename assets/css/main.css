@@ -351,6 +351,12 @@ footer #map-container .content-container button {
     transition: all .2s;
 }
 
+footer #adresse {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+}
+
 footer .footer-container {
     padding: 120px var(--padding-main);
     position: relative;
