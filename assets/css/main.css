@@ -62,7 +62,7 @@ body {
     background-color: var(--Background-color);
     color: var(--text-color);
     width: 100dvw;
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
     display: flex;
     flex-flow: column nowrap;
