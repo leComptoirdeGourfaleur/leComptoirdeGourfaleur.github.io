@@ -508,7 +508,7 @@ footer .footer-container ul li a:hover {
 
     #paiement {
         position: absolute;
-        gap: 20px;
+        justify-content: space-evenly;
         bottom: 48px;
     }
 
@@ -551,10 +551,12 @@ footer .footer-container ul li a:hover {
 
     #hero-section h1 {
         font-size: 2.5rem!important;
+        max-width: 90dvw!important;
     }
     
     #paiement {
         flex-flow: row wrap!important;
+        gap: 16px!important;
     }
 
     #menu img {
@@ -627,4 +629,13 @@ footer .footer-container ul li a:hover {
         font-size: 1.4rem!important;
     }
 
+    main section.card-container:last-child {
+        display: flex!important;
+        flex-flow: column nowrap!important;
+        padding-bottom: 16px!important;
+    }
+
+    #paiement {
+        position: relative!important;
+    }
 }

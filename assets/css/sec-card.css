@@ -16,6 +16,7 @@ main section.card-container:last-child {
 /*-----   infos  -----*/
 
 #infos {
+    max-width: 100dvw;
     display: flex;
     flex-flow: column nowrap;
     gap: 20px;
@@ -33,6 +34,7 @@ main section.card-container:last-child {
 /*-----   avis   -----*/
 
 #avis {
+    max-width: 100dvw;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
